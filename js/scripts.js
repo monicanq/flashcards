@@ -1,8 +1,10 @@
 //Variable declaration
 var cards = document.querySelectorAll('.flip-card');
+
 let firstClick = false;
 let lockGame = false;
 let firstCard, secondCard;
+
 
 //function assignments
 function flipCard () {
@@ -53,3 +55,20 @@ function resetGame(){
 for (var i = 0; i < cards.length; i++) {
   cards[i].addEventListener("click",flipCard);
 }
+cards = document.querySelectorAll('.flip-card-inner div:nth-child(2)')
+console.log(cards);
+
+
+cards.forEach(function(card){
+   var tagName = card.firstElementChild.tagName;
+   console.log('the parent node is ' + card.parentNode.firstElementChild.className);
+   if (tagName=='H1'){
+    card.parentNode.classList.add('name');
+    console.log('It is an h1');
+  } else if (tagName=='IMG') {
+    card.parentNode.classList.add('image')
+    console.log('It is an image');
+  }
+   // console.log('next');
+
+})

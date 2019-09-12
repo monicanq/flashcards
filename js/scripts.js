@@ -5,7 +5,6 @@ let firstClick = false;
 let lockGame = false;
 let firstCard, secondCard;
 
-
 //function assignments
 function flipCard () {
   if (lockGame) return;
@@ -58,7 +57,6 @@ for (var i = 0; i < cards.length; i++) {
 cards = document.querySelectorAll('.flip-card-inner div:nth-child(2)')
 console.log(cards);
 
-
 cards.forEach(function(card){
    var tagName = card.firstElementChild.tagName;
    console.log('the parent node is ' + card.parentNode.firstElementChild.className);
@@ -70,5 +68,4 @@ cards.forEach(function(card){
     console.log('It is an image');
   }
    // console.log('next');
-
 })
